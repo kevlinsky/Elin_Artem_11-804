@@ -5,8 +5,20 @@ public class LongSum{
 		System.out.println("Enter the first number:");
 		Scanner sc = new Scanner(System.in);
 		String x = sc.nextLine();
+		for (int i = 0; i < x.length(); i++){
+			if (x.charAt(i) < '0' || x.charAt(i) > '9'){
+				System.out.println("Incorrect number");
+				System.exit(1);
+			}
+		}
 		System.out.println("Enter the second number:");
 		String y = sc.nextLine();
+		for (int i = 0; i < y.length(); i++){
+			if (y.charAt(i) < '0' || y.charAt(i) > '9'){
+				System.out.println("Incorrect number");
+				System.exit(1);
+			}
+		}
 		StringBuilder sb = new StringBuilder();
 		StringBuilder sb1 = new StringBuilder(x);
 		StringBuilder sb2 = new StringBuilder(y);

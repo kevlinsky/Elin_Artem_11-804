@@ -5,12 +5,19 @@ public class RandArr {
 		System.out.println("Enter the length of array:");
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		double[] a = new double[n];
-		for (int i = 0; i < n; i++){
-			a[i] = Math.random();
-			System.out.format("%.2f / ", a[i]);
-			if (i == n){
-				System.out.format("%.2f /n",a[i]);
+		if (n < 0) {
+			System.out.println("Incorrect length");
+			System.exit(1);
+		}
+		int[] a = new int[n];
+		for (int i=0; i < n; i++) {
+			a[i] = (int) (Math.random() * 100); 
+		}
+		for (int i=0; i < n; i++) {
+			if (i == n-1){
+				System.out.println(a[i]);
+			} else {
+				System.out.print(a[i]+ " ");
 			}
 		} 
 	}
